@@ -7,16 +7,16 @@
         <div class=container-fluid>
             <div class=row>
                 <div class="col-sm-12 col-lg-4 jl-avatar-sobre order-2 order-lg-1">
-                    <div class=jl-box-img><img src="<?php bloginfo('template_url'); ?>/images/joao-lemon-designer-sobre.png" alt="Joao Lemon Designer" class=jl-img-responsive title="Joao Lemon Designer"></div>
+                    <div class=jl-box-img><img src="<?php the_field('foto-sobre'); ?>" alt="Joao Lemon Designer" class=jl-img-responsive title="Joao Lemon Designer"></div>
                 </div>
                 <div class="col-sm-12 col-lg-8 order-1 order-lg-2">
                     <div class="jl-mar-bottom-30 jl-titulo-sobre">
-                        <h1 class="jl-text-light jl-title jl-title-xlarge">João <span class=jl-text-green>Lemon</span></h1>
+                        <h1 class="jl-text-light jl-title jl-title-xlarge"><?php the_field('nome-sobre'); ?> <span class=jl-text-green><?php the_field('sobrenome-sobre'); ?></span></h1>
                     </div>
                     <div class="jl-text-light jl-info-sobre">
-                        <h4 class="jl-text-green jl-mar-bottom-15 jl-subtitle">Um pouco sobre mim</h4>
-                        <p>Nulla pellentesque sed nulla vel iaculis. Pellentesque dignissim fringilla urna. Nulla vulputate, ex in tincidunt consequat, dui metus luctus purus, ut dapibus quam augue sit amet leo. Phasellus sit amet purus in elit efficitur
-                            viverra. Cras fermentum velit sit amet odio lacinia, ut auctor leo suscipit. Ut malesuada ex ante, quis imperdiet dui luctus euismod. Ut quis dapibus lectus. Vivamus volutpat sapien a est auctor viverra.
+                        <h4 class="jl-text-green jl-mar-bottom-15 jl-subtitle"><?php the_field('subtitulo-1-sobre'); ?></h4>
+                        <?php the_field('texto-1-sobre'); ?>
+                    
                             <div class="jl-contact-info-inner jl-mar-top-30">
                                 <div class="jl-mar-bottom-30 jl-social-links-circle">
                                     <a href=# class="jl-social jl-bg-green jl-mar-right-30 jl-text-black">
@@ -33,11 +33,8 @@
                                 <p>+55 (00) 9 9999 8888</div>
                     </div>
                     <div class=jl-premios-sobre>
-                        <h4 class="jl-text-green jl-mar-bottom-15 jl-subtitle">Prêmios e Reconhecimentos</h4>
-                        <ul class="jl-text-light jl-page-list">
-                            <li>Awwwards Site of the day
-                                <li>CSS Mania
-                                    <li>FWA Site of the day</ul>
+                        <h4 class="jl-text-green jl-mar-bottom-15 jl-subtitle"><?php the_field('subtitulo-2-sobre'); ?></h4>
+                        <?php the_field('texto-2-sobre'); ?>
                     </div>
                 </div>
             </div>

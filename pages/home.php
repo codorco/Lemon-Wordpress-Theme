@@ -8,8 +8,8 @@
             <div class=row>
                 <div class="col-sm-12 col-lg-4 col-md-10 col-xl-3 jl-display-text offset-lg-1 offset-md-1 offset-xl-2">
                     <h1 class="jl-title jl-text-green jl-title-xlarge"><?php the_field('hero_title'); ?></h1>
-                    <p class=jl-text-light>Meu nome é <span class=jl-text-green>João Lemon</span>, sou designer de <span class=jl-text-green>UX e UI</span>. Nulla vulputate, ex in tincidunt consequat, dui metus luctus purus, ut dapibus quam augue sit amet leo. Phasellus sit
-                        amet purus in elit efficitur viverra.</p><button class="jl-btn jl-btn-green jl-btn-large jl-mar-top-15 jl-toggle-modal">solicite um orçamento</button></div>
+                    <p class=jl-text-light><?php the_field('hero_text'); ?></p>
+                    <button class="jl-btn jl-btn-green jl-btn-large jl-mar-top-15 jl-toggle-modal">solicite um orçamento</button></div>
             </div>
             <div class=jl-scroll-down>
                 <div class=jl-arrow-down><img src="<?php bloginfo('template_url'); ?>/images/arrow-down.svg" alt="Role a Página"></div>
