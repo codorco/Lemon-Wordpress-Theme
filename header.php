@@ -5,6 +5,7 @@
     <meta content="width=device-width,initial-scale=1" name=viewport>
     <meta content="ie=edge" http-equiv=X-UA-Compatible>
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans:400,400i,700,700i,800,800i&display=swap" rel=stylesheet>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href=<?php bloginfo('template_url'); ?>/css/bootstrap-grid.min.css rel=stylesheet>
     <link href=<?php bloginfo('template_url'); ?>/css/main.min.css rel=stylesheet>
     <script src=https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js type=module></script>
@@ -16,7 +17,7 @@
 <div class=border-top-left></div>
 <div class=border-bottom-right></div>
 <div class=jl-preloader>
-    <div class=jl-preloader-inner><img src=<?php bloginfo('template_url'); ?>/images/lemon-loader.svg class=jl-mar-bottom-15>
+    <div class=jl-preloader-inner><img src="<?php bloginfo('template_url'); ?>/images/lemon-loader.svg" class=jl-mar-bottom-15>
         <p class="jl-text-light jl-mar-top-15">Aguarde um pouquinho … Estou preparando a limonada</div>
 </div>
 <div class="jl-toggle-modal jl-overlay"></div>
@@ -48,7 +49,7 @@
     </div>
 </div>
 <header class=jl-topbar>
-    <div class="jl-logo jl-logo-big"><img src=<?php bloginfo('template_url'); ?>/images/logo.svg alt="Logo João Lemon UX/UI Designer"></div>
+    <div class="jl-logo jl-logo-big"><img src="<?php bloginfo('template_url'); ?>/images/logo.svg" alt="Logo João Lemon UX/UI Designer"></div>
     <nav class=jl-menu><a href=#>Home</a> <a href=/portfolio>Portfolio</a> <a href=/sobre>Sobre</a></nav>
 </header><button class="jl-toggle-menu jl-btn-menu-mob"><ion-icon name=menu></ion-icon></button>
 <nav class="jl-menu-is-closed jl-menu-mob"><a href=#>Home</a> <a href=/portfolio>Portfolio</a> <a href=/sobre>Sobre</a></nav>
@@ -57,7 +58,10 @@
         <h2 class="jl-title jl-text-green">Contato</h2>
         <p>hello@lemon.com
             <p>+55 (00) 9 9999 8888
-                <div class=jl-social-links><a href=# class=jl-social><img src=<?php bloginfo('template_url'); ?>/images/icon-instagram.svg alt=Instagram> </a><a href=# class=jl-social><img src=<?php bloginfo('template_url'); ?>/images/icon-twitter.svg alt=Twitter> </a><a href=# class=jl-social><img src=<?php bloginfo('template_url'); ?>/images/icon-dribbble.svg alt=Dribbble></a></div>
+                <div class=jl-social-links><a href=# class=jl-social>
+                    <img src="<?php bloginfo('template_url'); ?>/images/icon-instagram.svg" alt=Instagram> </a><a href=# class=jl-social>
+                    <img src="<?php bloginfo('template_url'); ?>/images/icon-twitter.svg" alt=Twitter> </a><a href=# class=jl-social>
+                    <img src="<?php bloginfo('template_url'); ?>/images/icon-dribbble.svg" alt=Dribbble></a></div>
     </div>
     <div class=jl-corner></div>
 </div><button class=jl-btn-contact></button>
