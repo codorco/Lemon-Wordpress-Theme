@@ -3,8 +3,6 @@
 ?>
 <?php get_header(); ?>
 
-
-<div class=jl-page-wrapper>
     <section class="container-fluid jl-section-offset-top">
         <div class=row>
             <div class="col-sm-10 offset-sm-1">

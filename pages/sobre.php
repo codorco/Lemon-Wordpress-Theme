@@ -3,7 +3,6 @@
     get_header();
 
 ?>
-<div class=jl-page-wrapper>
     <section class="jl-section-offset-top jl-section-sobre">
         <div class=container-fluid>
             <div class=row>
