@@ -17,7 +17,7 @@
                             </div>
                             <div class="col-sm-12 col-lg-6 order-1 order-lg-2 offset-lg-1">
                                 <div class=jl-portfolio-item-thumb>
-                                    <div class="d-lg-block d-none jl-portfolio-item-box" data-aos=zoom-in></div><img src=../images/thumb-1.jpg alt="Startup Rocketz" data-aos=flip-left data-aos-delay=300 data-aos-offset=300 title="Startup Rocketz"> <a href=# class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a></div>
+                                    <div class="d-lg-block d-none jl-portfolio-item-box" data-aos=zoom-in></div><img src="<?php bloginfo('template_url');?>/images/thumb-1.jpg" alt="Startup Rocketz" data-aos=flip-left data-aos-delay=300 data-aos-offset=300 title="Startup Rocketz"> <a href=# class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a></div>
                             </div>
                         </div>
                         <li class=jl-portfolio-item data-slide=2>
@@ -29,7 +29,7 @@
                                 </div>
                                 <div class="col-sm-12 col-lg-6 order-1 order-lg-2">
                                     <div class=jl-portfolio-item-thumb>
-                                        <div class="d-lg-block d-none jl-portfolio-item-box" data-aos=zoom-in></div><img src=../images/thumb-2.jpg alt="Manage It!" data-aos=flip-left data-aos-delay=300 data-aos-offset=300 title="Manage It!"> <a href=# class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a></div>
+                                        <div class="d-lg-block d-none jl-portfolio-item-box" data-aos=zoom-in></div><img src="<?php bloginfo('template_url'); ?>/images/thumb-2.jpg" alt="Manage It!" data-aos=flip-left data-aos-delay=300 data-aos-offset=300 title="Manage It!"> <a href=# class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a></div>
                                 </div>
                             </div>
                             <li class=jl-portfolio-item data-slide=3>
@@ -41,7 +41,7 @@
                                     </div>
                                     <div class="col-sm-12 col-lg-6 order-1 order-lg-2 offset-lg-1">
                                         <div class=jl-portfolio-item-thumb>
-                                            <div class="d-lg-block d-none jl-portfolio-item-box" data-aos=zoom-in></div><img src=../images/thumb-3.jpg alt="Vinyassa App" data-aos=flip-left data-aos-delay=300 data-aos-offset=300 title="Vinyassa App"> <a href=# class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a></div>
+                                            <div class="d-lg-block d-none jl-portfolio-item-box" data-aos=zoom-in></div><img src="<?php bloginfo('template_url'); ?>/images/thumb-3.jpg" alt="Vinyassa App" data-aos=flip-left data-aos-delay=300 data-aos-offset=300 title="Vinyassa App"> <a href=# class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a></div>
                                     </div>
                                 </div>
                                 <li class=jl-portfolio-item data-slide=4>
@@ -53,7 +53,7 @@
                                         </div>
                                         <div class="col-sm-12 col-lg-6 order-1 order-lg-2">
                                             <div class=jl-portfolio-item-thumb>
-                                                <div class="d-lg-block d-none jl-portfolio-item-box" data-aos=zoom-in></div><img src=../images/thumb-4.jpg alt="Conteúdo é Rei!" data-aos=flip-left data-aos-delay=300 data-aos-offset=300 title="Conteúdo é Rei!"> <a href=# class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a></div>
+                                                <div class="d-lg-block d-none jl-portfolio-item-box" data-aos=zoom-in></div><img src="<?php bloginfo('template_url'); ?>/images/thumb-4.jpg" alt="Conteúdo é Rei!" data-aos=flip-left data-aos-delay=300 data-aos-offset=300 title="Conteúdo é Rei!"> <a href=# class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a></div>
                                         </div>
                                     </div>
                                     <li class=jl-portfolio-item data-slide=5>
@@ -65,7 +65,7 @@
                                             </div>
                                             <div class="col-sm-12 col-lg-6 order-1 order-lg-2 offset-lg-1">
                                                 <div class=jl-portfolio-item-thumb>
-                                                    <div class="d-lg-block d-none jl-portfolio-item-box" data-aos=zoom-in></div><img src=../images/thumb-5.jpg alt="Controle Total" data-aos=flip-left data-aos-delay=300 data-aos-offset=300 title="Controle Total"> <a href=# class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a></div>
+                                                    <div class="d-lg-block d-none jl-portfolio-item-box" data-aos=zoom-in></div><img src="<?php bloginfo('template_url'); ?>/images/thumb-5.jpg" alt="Controle Total" data-aos=flip-left data-aos-delay=300 data-aos-offset=300 title="Controle Total"> <a href=# class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a></div>
                                             </div>
                                         </div>
                 </ul>
@@ -74,5 +74,4 @@
     </section>
 
 
-<?php get_footer('portfolio'); ?> 
-<?php //get_template_part('parts/footer', 'portfolio'); ?>
+<?php get_template_part('parts/footer', 'portfolio'); ?>

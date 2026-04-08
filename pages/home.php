@@ -12,7 +12,7 @@
                         amet purus in elit efficitur viverra.</p><button class="jl-btn jl-btn-green jl-btn-large jl-mar-top-15 jl-toggle-modal">solicite um orçamento</button></div>
             </div>
             <div class=jl-scroll-down>
-                <div class=jl-arrow-down><img src=<?php bloginfo('template_url'); ?>/images/arrow-down.svg alt="Role a Página"></div>
+                <div class=jl-arrow-down><img src="<?php bloginfo('template_url'); ?>/images/arrow-down.svg" alt="Role a Página"></div>
             </div>
     </section>
     <section class=jl-full-height id=jl-home-portfolio>
@@ -50,7 +50,7 @@
                                     </div>
                                     <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-1 order-1 order-md-2 order-sm-1">
                                         <div class=jl-portfolio-item-thumb>
-                                            <div class="d-lg-block d-none d-sm-none jl-portfolio-item-box jl-scale-right"></div><img src=<?php bloginfo('template_url'); ?>/images/thumb-1.jpg alt="Startup Rocketz" title="Startup Rocketz" class=jl-scale-up> <a href=# class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a></div>
+                                            <div class="d-lg-block d-none d-sm-none jl-portfolio-item-box jl-scale-right"></div><img src="<?php bloginfo('template_url'); ?>/images/thumb-1.jpg" alt="Startup Rocketz" title="Startup Rocketz" class=jl-scale-up> <a href=# class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a></div>
                                     </div>
                                 </div>
                                 <li class=jl-portfolio-item data-slide=2>
@@ -62,7 +62,7 @@
                                         </div>
                                         <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-1 order-1 order-md-2 order-sm-1">
                                             <div class=jl-portfolio-item-thumb>
-                                                <div class="d-lg-block d-none d-sm-none jl-portfolio-item-box"></div><img src=<?php bloginfo('template_url'); ?>/images/thumb-2.jpg alt="Manage It!" title="Manage It!"> <a href=# class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a></div>
+                                                <div class="d-lg-block d-none d-sm-none jl-portfolio-item-box"></div><img src="<?php bloginfo('template_url'); ?>/images/thumb-2.jpg" alt="Manage It!" title="Manage It!"> <a href=# class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a></div>
                                         </div>
                                     </div>
                                     <li class=jl-portfolio-item data-slide=3>
@@ -74,7 +74,7 @@
                                             </div>
                                             <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-1 order-1 order-md-2 order-sm-1">
                                                 <div class=jl-portfolio-item-thumb>
-                                                    <div class="d-lg-block d-none d-sm-none jl-portfolio-item-box"></div><img src=<?php bloginfo('template_url'); ?>/images/thumb-3.jpg alt="Vinyassa App" title="Vinyassa App"> <a href=# class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a></div>
+                                                    <div class="d-lg-block d-none d-sm-none jl-portfolio-item-box"></div><img src="<?php bloginfo('template_url'); ?>/images/thumb-3.jpg" alt="Vinyassa App" title="Vinyassa App"> <a href=# class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a></div>
                                             </div>
                                         </div>
                                         <li class=jl-portfolio-item data-slide=4>
@@ -86,7 +86,7 @@
                                                 </div>
                                                 <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-1 order-1 order-md-2 order-sm-1">
                                                     <div class=jl-portfolio-item-thumb>
-                                                        <div class="d-lg-block d-none d-sm-none jl-portfolio-item-box"></div><img src=<?php bloginfo('template_url'); ?>/images/thumb-4.jpg alt="Conteúdo é Rei!" title="Conteúdo é Rei!"> <a href=# class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a></div>
+                                                        <div class="d-lg-block d-none d-sm-none jl-portfolio-item-box"></div><img src="<?php bloginfo('template_url'); ?>/images/thumb-4.jpg" alt="Conteúdo é Rei!" title="Conteúdo é Rei!"> <a href=# class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a></div>
                                                 </div>
                                             </div>
                                             <li class=jl-portfolio-item data-slide=5>
@@ -98,7 +98,7 @@
                                                     </div>
                                                     <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-1 order-1 order-md-2 order-sm-1">
                                                         <div class=jl-portfolio-item-thumb>
-                                                            <div class="d-lg-block d-none d-sm-none jl-portfolio-item-box"></div><img src=<?php bloginfo('template_url'); ?>/images/thumb-5.jpg alt="Controle Total" title="Controle Total"> <a href=# class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a></div>
+                                                            <div class="d-lg-block d-none d-sm-none jl-portfolio-item-box"></div><img src="<?php bloginfo('template_url'); ?>/images/thumb-5.jpg" alt="Controle Total" title="Controle Total"> <a href=# class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a></div>
                                                     </div>
                                                 </div>
                         </ul>
@@ -108,5 +108,5 @@
         </div>
     </section>
 
-<?php get_footer('home'); ?> 
-<?php //get_template_part('parts/footer', 'home'); ?>
+
+<?php get_template_part('parts/footer', 'home'); ?>
