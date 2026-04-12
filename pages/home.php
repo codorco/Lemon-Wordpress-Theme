@@ -7,8 +7,8 @@
         <div class=container-fluid>
             <div class=row>
                 <div class="col-sm-12 col-lg-4 col-md-10 col-xl-3 jl-display-text offset-lg-1 offset-md-1 offset-xl-2">
-                    <h1 class="jl-title jl-text-green jl-title-xlarge"><?php the_field('hero_title'); ?></h1>
-                    <p class=jl-text-light><?php the_field('hero_text'); ?></p>
+                    <h1 class="jl-title jl-text-green jl-title-xlarge"><?php jl_the_field('hero_title'); ?></h1>
+                    <p class=jl-text-light><?php jl_the_field('hero_text'); ?></p>
                     <button class="jl-btn jl-btn-green jl-btn-large jl-mar-top-15 jl-toggle-modal">solicite um orçamento</button></div>
             </div>
             <div class=jl-scroll-down>
@@ -41,66 +41,40 @@
                 <div class="col-sm-12 order-1 order-sm-1 col-lg-10 order-lg-2">
                     <div class="jl-full-height jl-slider-container">
                         <ul class="jl-full-height jl-slider-list">
-                            <li class="jl-portfolio-item jl-slide-active" data-slide=1>
+
+                        <?php
+                    $args = array(
+                        'post_type' => 'project',
+                        'posts_per_page' => -1,
+                    );
+                    $portfolio_query = new WP_Query( $args );
+
+                    $item = 0;
+
+                    if ( $portfolio_query->have_posts() ) : while ( $portfolio_query->have_posts() ) : $portfolio_query->the_post(); $item++;?>
+                    
+
+                            <li class="jl-portfolio-item jl-slide-active" data-slide="<?php echo $item ?>">
                                 <div class=row>
                                     <div class="col-sm-12 col-md-12 col-lg-4 order-2 order-md-1 order-sm-2">
                                         <div class="jl-text-light jl-portfolio-item-info jl-fade-from-left">
-                                            <h1 class="jl-title jl-mar-bottom-15 jl-title-large">Startup Rocketz Website</h1>
-                                            <p class=jl-mar-bottom-30>UX, UI e WordPress para aceleradora de startups.</p><a href=# class="jl-btn jl-btn-green jl-btn-large">ver projeto</a></div>
+                                            <h1 class="jl-title jl-mar-bottom-15 jl-title-large"><?php the_title(); ?></h1>
+                                            <p class=jl-mar-bottom-30><?php the_excerpt(); ?></p>
+                                            <a href="<?php the_permalink(); ?>" class="jl-btn jl-btn-green jl-btn-large mt-4">ver projeto</a></div>
                                     </div>
                                     <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-1 order-1 order-md-2 order-sm-1">
                                         <div class=jl-portfolio-item-thumb>
-                                            <div class="d-lg-block d-none d-sm-none jl-portfolio-item-box jl-scale-right"></div><img src="<?php bloginfo('template_url'); ?>/images/thumb-1.jpg" alt="Startup Rocketz" title="Startup Rocketz" class=jl-scale-up> <a href=# class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a></div>
+                                            <div class="d-lg-block d-none d-sm-none jl-portfolio-item-box jl-scale-right"></div>
+                                            <img src="<?php the_post_thumbnail_url('portfolio-thumb'); ?>" alt="Startup Rocketz" title="Startup Rocketz" class="<?php echo ($item == 1) ? 'jl-scale-up' : ''; ?>">
+                                            <a href="<?php the_permalink(); ?>" class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a>
+                                        </div>
                                     </div>
                                 </div>
-                                <li class=jl-portfolio-item data-slide=2>
-                                    <div class=row>
-                                        <div class="col-sm-12 col-md-12 col-lg-4 order-2 order-md-1 order-sm-2">
-                                            <div class="jl-text-light jl-portfolio-item-info">
-                                                <h1 class="jl-title jl-mar-bottom-15 jl-title-large">Manage It! Aplicativo Mobile</h1>
-                                                <p class=jl-mar-bottom-30>UX, UI e Protipação para aplicativo mobile.</p><a href=/portfolio/manage-it/ class="jl-btn jl-btn-green jl-btn-large">ver projeto</a></div>
-                                        </div>
-                                        <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-1 order-1 order-md-2 order-sm-1">
-                                            <div class=jl-portfolio-item-thumb>
-                                                <div class="d-lg-block d-none d-sm-none jl-portfolio-item-box"></div><img src="<?php bloginfo('template_url'); ?>/images/thumb-2.jpg" alt="Manage It!" title="Manage It!"> <a href=# class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a></div>
-                                        </div>
-                                    </div>
-                                    <li class=jl-portfolio-item data-slide=3>
-                                        <div class=row>
-                                            <div class="col-sm-12 col-md-12 col-lg-4 order-2 order-md-1 order-sm-2">
-                                                <div class="jl-text-light jl-portfolio-item-info">
-                                                    <h1 class="jl-title jl-mar-bottom-15 jl-title-large">Vinyassa! Aplicativo Mobile</h1>
-                                                    <p class=jl-mar-bottom-30>UX, UI e Protipação para aplicativo mobile.</p><a href=# class="jl-btn jl-btn-green jl-btn-large">ver projeto</a></div>
-                                            </div>
-                                            <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-1 order-1 order-md-2 order-sm-1">
-                                                <div class=jl-portfolio-item-thumb>
-                                                    <div class="d-lg-block d-none d-sm-none jl-portfolio-item-box"></div><img src="<?php bloginfo('template_url'); ?>/images/thumb-3.jpg" alt="Vinyassa App" title="Vinyassa App"> <a href=# class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a></div>
-                                            </div>
-                                        </div>
-                                        <li class=jl-portfolio-item data-slide=4>
-                                            <div class=row>
-                                                <div class="col-sm-12 col-md-12 col-lg-4 order-2 order-md-1 order-sm-2">
-                                                    <div class="jl-text-light jl-portfolio-item-info">
-                                                        <h1 class="jl-title jl-mar-bottom-15 jl-title-large">Conteúdo é Rei! Website para agência.</h1>
-                                                        <p class=jl-mar-bottom-30>Website para agência de conteúdo digital.</p><a href=# class="jl-btn jl-btn-green jl-btn-large">ver projeto</a></div>
-                                                </div>
-                                                <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-1 order-1 order-md-2 order-sm-1">
-                                                    <div class=jl-portfolio-item-thumb>
-                                                        <div class="d-lg-block d-none d-sm-none jl-portfolio-item-box"></div><img src="<?php bloginfo('template_url'); ?>/images/thumb-4.jpg" alt="Conteúdo é Rei!" title="Conteúdo é Rei!"> <a href=# class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a></div>
-                                                </div>
-                                            </div>
-                                            <li class=jl-portfolio-item data-slide=5>
-                                                <div class=row>
-                                                    <div class="col-sm-12 col-md-12 col-lg-4 order-2 order-md-1 order-sm-2">
-                                                        <div class="jl-text-light jl-portfolio-item-info">
-                                                            <h1 class="jl-title jl-mar-bottom-15 jl-title-large">Controle Total. Web App</h1>
-                                                            <p class=jl-mar-bottom-30>UX, UI e Protipação para aplicativo web.</p><a href=# class="jl-btn jl-btn-green jl-btn-large">ver projeto</a></div>
-                                                    </div>
-                                                    <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-1 order-1 order-md-2 order-sm-1">
-                                                        <div class=jl-portfolio-item-thumb>
-                                                            <div class="d-lg-block d-none d-sm-none jl-portfolio-item-box"></div><img src="<?php bloginfo('template_url'); ?>/images/thumb-5.jpg" alt="Controle Total" title="Controle Total"> <a href=# class="jl-btn jl-btn-dark jl-btn-medium">visitar site<ion-icon name=share-alt></ion-icon></a></div>
-                                                    </div>
-                                                </div>
+                            </li>
+                            <?php endwhile; else :
+                            echo '<p>Desculpe, nenhum post encontrado.</p>'; ?>
+                            <?php endif; ?>
+                            
                         </ul>
                     </div>
                 </div>

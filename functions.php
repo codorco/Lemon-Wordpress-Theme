@@ -2,6 +2,21 @@
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'portfolio-thumb', 750, 500, false );
 
+if ( ! function_exists( 'jl_get_field' ) ) {
+	function jl_get_field( $field_name ) {
+		if ( function_exists( 'get_field' ) ) {
+			return get_field( $field_name );
+		}
+		return '';
+	}
+}
+
+if ( ! function_exists( 'jl_the_field' ) ) {
+	function jl_the_field( $field_name ) {
+		echo jl_get_field( $field_name );
+	}
+}
+
 // Register Custom Post Type
 function cpt_project() {
 
@@ -38,7 +53,7 @@ function cpt_project() {
 		'label'                   => 'Portfolio',
 		'description'             => 'Postagem de Portfolio',
 		'labels'                  => $labels,
-		'supports'                => array( 'title', 'editor', 'author', 'thumbnail', 'custom-fields', 'page-attributes' ),
+		'supports'                => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields', 'page-attributes' ),
 		'taxonomies'              => array( 'category' ),
 		'hierarchical'            => false,
 		'public'                  => true,

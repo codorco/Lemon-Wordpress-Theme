@@ -21,9 +21,8 @@
                             <div class="col-sm-12 order-2 order-lg-1 col-lg-5">
                                 <div class="jl-text-light jl-portfolio-item-info" data-aos="fade-right" data-aos-delay="200">
                                     <h1 class="jl-mar-bottom-15 jl-title jl-title-large"><?php the_title(); ?></h1>
-                                     <!-- <p class="jl-mar-bottom-30">UX, UI e WordPress para aceleradora de startups.</p> -->
                                      <p class="jl-mar-bottom-30"><?php the_excerpt(); ?></p>
-                                    <a href="<?php the_permalink(); ?>" class="jl-btn jl-btn-green jl-btn-large">ver projeto</a>
+                                    <a href="<?php the_permalink(); ?>" class="jl-btn jl-btn-green jl-btn-large mt-4">ver projeto</a>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-lg-6 order-1 order-lg-2 offset-lg-1">
