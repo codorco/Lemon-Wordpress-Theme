@@ -1,15 +1,14 @@
 <?php get_header(); ?>
 <?php get_template_part('parts/section', 'portfolio-hero'); ?>
 <?php get_template_part('parts/section', 'portfolio-body'); ?>
+<?php 
+    $pre_gallery = get_field('pre_gallery');
+    if ($pre_gallery) :
+      get_template_part('parts/section', 'pre-gallery'); 
+    endif;
+?>
 
-      <section class="jl-post-section jl-pre-gallery" style=background-color:#3b427a>
-        <div class=container>
-          <div class=row>
-            <div class="col-sm-10 offset-sm-1"><img alt="Imagem de prévia do app" src=img/previa-1.png
-                class=jl-img-responsive title="Imagem de prévia do app"></div>
-          </div>
-        </div>
-      </section>
+      
       <section class="jl-post-section jl-post-gallery">
         <div class=container>
           <div class=row>
