@@ -50,11 +50,26 @@
         </div>
     </div>
 </div>
-<header class=jl-topbar>
-    <div class="jl-logo jl-logo-big"><img src="<?php bloginfo('template_url'); ?>/images/logo.svg" alt="Logo João Lemon UX/UI Designer"></div>
-    <nav class=jl-menu><a href=#>Home</a> <a href=/portfolio>Portfolio</a> <a href=/sobre>Sobre</a></nav>
-</header><button class="jl-toggle-menu jl-btn-menu-mob"><ion-icon name=menu></ion-icon></button>
-<nav class="jl-menu-is-closed jl-menu-mob"><a href=#>Home</a> <a href=/portfolio>Portfolio</a> <a href=/sobre>Sobre</a></nav>
+<header class="jl-topbar">
+    <div class="jl-logo jl-logo-big">
+        <img src="<?php bloginfo('template_url'); ?>/images/logo.svg" alt="Logo João Lemon UX/UI Designer">
+    </div>
+    <nav class="jl-menu">
+        <a href="<?php echo home_url('/'); ?>">Home</a> 
+        <a href="<?php echo home_url('/portfolio'); ?>">Portfolio</a> 
+        <a href="<?php echo home_url('/sobre'); ?>">Sobre</a>
+    </nav>
+</header>
+
+<button class="jl-toggle-menu jl-btn-menu-mob">
+    <ion-icon name="menu"></ion-icon>
+</button>
+
+<nav class="jl-menu-is-closed jl-menu-mob">
+    <a href="<?php echo home_url('/'); ?>">Home</a> 
+    <a href="<?php echo home_url('/portfolio'); ?>">Portfolio</a> 
+    <a href="<?php echo home_url('/sobre'); ?>">Sobre</a>
+</nav>
 <div class="jl-text-light jl-bg-black jl-contact-info">
     <div class=jl-contact-info-inner>
         <h2 class="jl-title jl-text-green">Contato</h2>
