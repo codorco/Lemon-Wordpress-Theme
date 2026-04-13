@@ -78,3 +78,24 @@ function cpt_project() {
 
 }
 add_action( 'init', 'cpt_project', 0 );
+
+function limao_block_styles() {
+    // Garante que a biblioteca base esteja na fila
+    wp_enqueue_style( 'wp-block-library' );
+
+    // Adiciona o seu CSS customizado logo após a biblioteca
+    wp_add_inline_style( 'wp-block-library', '
+        .wp-block-columns {
+            display: flex !important;
+            flex-wrap: wrap !important;
+        }
+        .wp-block-column {
+            flex: 1 !important;
+            margin-right: 1em !important;
+        }
+        .wp-block-column:last-child {
+            margin-right: 0 !important;
+        }
+    ' );
+}
+add_action( 'wp_enqueue_scripts', 'limao_block_styles' );
