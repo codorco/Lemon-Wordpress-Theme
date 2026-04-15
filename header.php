@@ -50,6 +50,9 @@
         </div>
     </div>
 </div>
+<?php if (is_singular('project')) : ?>
+    <?php get_template_part('parts/gallery', 'modal'); ?>
+<?php endif; ?>
 <header class="jl-topbar">
     <div class="jl-logo jl-logo-big">
         <img src="<?php bloginfo('template_url'); ?>/images/logo.svg" alt="Logo João Lemon UX/UI Designer">
