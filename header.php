@@ -74,16 +74,24 @@
     <a href="<?php echo home_url('/sobre'); ?>">Sobre</a>
 </nav>
 <div class="jl-text-light jl-bg-black jl-contact-info">
-    <div class=jl-contact-info-inner>
+    <div class="jl-contact-info-inner">
         <h2 class="jl-title jl-text-green">Contato</h2>
-        <p>hello@lemon.com
-            <p>+55 (00) 9 9999 8888
-                <div class=jl-social-links><a href=# class=jl-social>
-                    <img src="<?php bloginfo('template_url'); ?>/images/icon-instagram.svg" alt=Instagram> </a><a href=# class=jl-social>
-                    <img src="<?php bloginfo('template_url'); ?>/images/icon-twitter.svg" alt=Twitter> </a><a href=# class=jl-social>
-                    <img src="<?php bloginfo('template_url'); ?>/images/icon-dribbble.svg" alt=Dribbble></a></div>
+        <p><?php echo get_option('copacf_options_email'); ?></p>
+        <p><?php echo get_option('copacf_options_telefone'); ?></p>
+        <div class="jl-social-links">
+            <a href="<?php echo get_option('copacf_options_instagram'); ?>" class="jl-social">
+                <img src="<?php bloginfo('template_url'); ?>/images/icon-instagram.svg" alt="Instagram">
+            </a>
+            <a href="<?php echo get_option('copacf_options_x'); ?>" class="jl-social">
+                <img src="<?php bloginfo('template_url'); ?>/images/icon-twitter.svg" alt="Twitter">
+            </a>
+            <a href="<?php echo get_option('copacf_options_dribbble'); ?>" class="jl-social">
+                <img src="<?php bloginfo('template_url'); ?>/images/icon-dribbble.svg" alt="Dribbble">
+            </a>
+        </div>
     </div>
-    <div class=jl-corner></div>
-</div><button class=jl-btn-contact></button>
+    <div class="jl-corner"></div>
+</div>
+<button class=jl-btn-contact></button>
 <div class=jl-page-wrapper>
 

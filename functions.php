@@ -3,6 +3,8 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'portfolio-thumb', 750, 500, false );
 add_theme_support( 'align-wide' );
 
+
+
 if ( ! function_exists( 'jl_get_field' ) ) {
 	function jl_get_field( $field_name ) {
 		if ( function_exists( 'get_field' ) ) {
@@ -17,6 +19,7 @@ if ( ! function_exists( 'jl_the_field' ) ) {
 		echo jl_get_field( $field_name );
 	}
 }
+
 
 // Register Custom Post Type
 function cpt_project() {
