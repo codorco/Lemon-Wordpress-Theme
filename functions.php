@@ -3,6 +3,16 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'portfolio-thumb', 750, 500, false );
 add_theme_support( 'align-wide' );
 
+function register_my_menus() {
+  register_nav_menus(
+    array(
+      'desktop-menu' => __( 'Desktop Menu' ),
+      'mobile-menu' => __( 'Mobile Menu' )
+     )
+   );
+ }
+ add_action( 'init', 'register_my_menus' );
+
 
 
 if ( ! function_exists( 'jl_get_field' ) ) {

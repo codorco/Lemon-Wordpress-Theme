@@ -57,11 +57,22 @@
     <div class="jl-logo jl-logo-big">
         <img src="<?php bloginfo('template_url'); ?>/images/logo.svg" alt="Logo João Lemon UX/UI Designer">
     </div>
-    <nav class="jl-menu">
-        <a href="<?php echo home_url('/'); ?>">Home</a> 
-        <a href="<?php echo home_url('/portfolio'); ?>">Portfolio</a> 
-        <a href="<?php echo home_url('/sobre'); ?>">Sobre</a>
-    </nav>
+<nav class="jl-menu">
+    <?php
+    wp_nav_menu(
+        array(
+            'theme_location' => 'desktop-menu',
+            'container'      => false,
+            'fallback_cb'    => false,
+            'items_wrap'     => '%3$s', 
+            'echo'           => false   
+        )
+    );
+    
+    $menu = wp_nav_menu( array( 'theme_location' => 'desktop-menu', 'container' => false, 'echo' => false, 'items_wrap' => '%3$s' ) );
+    echo strip_tags($menu, '<a>'); 
+    ?>
+</nav>
 </header>
 
 <button class="jl-toggle-menu jl-btn-menu-mob">
@@ -69,9 +80,16 @@
 </button>
 
 <nav class="jl-menu-is-closed jl-menu-mob">
-    <a href="<?php echo home_url('/'); ?>">Home</a> 
-    <a href="<?php echo home_url('/portfolio'); ?>">Portfolio</a> 
-    <a href="<?php echo home_url('/sobre'); ?>">Sobre</a>
+    <?php
+    $menu_mob = wp_nav_menu( array( 
+        'theme_location' => 'mobile-menu', 
+        'container'      => false, 
+        'echo'           => false, 
+        'items_wrap'     => '%3$s' 
+    ) );
+    
+    echo strip_tags($menu_mob, '<a>'); 
+    ?>
 </nav>
 <div class="jl-text-light jl-bg-black jl-contact-info">
     <div class="jl-contact-info-inner">
