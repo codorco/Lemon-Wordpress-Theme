@@ -3,6 +3,61 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'portfolio-thumb', 750, 500, false );
 add_theme_support( 'align-wide' );
 
+
+function limao_enqueue_assets() {
+    
+    // --- ESTILOS ---
+    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans:400,400i,700,700i,800,800i&display=swap', array(), null);
+    wp_enqueue_style('bootstrap-grid', get_theme_file_uri('/css/bootstrap-grid.min.css'), array(), null);
+    wp_enqueue_style('gutenberg', get_theme_file_uri('/css/gutenberg-blocks.css'), array('bootstrap-grid'), wp_get_theme()->get('Version'));
+    wp_enqueue_style('main-style', get_theme_file_uri('/css/main.min.css'), array('bootstrap-grid', 'gutenberg', 'google-fonts'), wp_get_theme()->get('Version'));
+    wp_enqueue_style('style', get_stylesheet_uri(), array('main-style'), wp_get_theme()->get('Version'));
+	wp_enqueue_style('aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css', array(), null);
+
+
+    // --- SCRIPTS GLOBAIS ---
+    wp_enqueue_script('ionicons-esm', 'https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js', array(), null, false);
+    wp_enqueue_script('ionicons', 'https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js', array(), null, false);
+
+    $deps = array('jquery');
+
+    // --- HOME ---
+    if ( is_home() || is_front_page() ) {
+        wp_enqueue_script('waypoints', 'https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js', array(), null, true);
+        wp_enqueue_script('waypoints-inview', 'https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/inview.min.js', array('waypoints'), null, true);
+        wp_enqueue_script('anime', get_theme_file_uri('/js/anime.min.js'), array(), null, true);
+        wp_enqueue_script('slider', get_theme_file_uri('/js/slider.min.js'), array(), null, true);
+        
+        array_push($deps, 'waypoints', 'waypoints-inview', 'anime', 'slider');
+    } 
+
+    // --- PÁGINAS ---
+    if ( is_page('portfolio') || is_page('sobre') ) {
+        wp_enqueue_script('aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array(), null, true);
+        wp_enqueue_script('waypoints', 'https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js', array(), null, true);
+        
+        array_push($deps, 'waypoints');
+    }
+
+    // --- SINGLE PROJECT ---
+    if ( is_singular('project') ) {
+		wp_enqueue_script('aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array(), null, true);
+		wp_enqueue_script('anime', get_theme_file_uri('/js/anime.min.js'), array(), null, true);
+        wp_enqueue_script('waypoints', 'https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js', array(), null, true);
+        wp_enqueue_script('waypoints-inview', 'https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/inview.min.js', array('waypoints'), null, true);
+        wp_enqueue_script('rellax', 'https://cdnjs.cloudflare.com/ajax/libs/rellax/1.10.0/rellax.min.js', array(), null, true);
+        wp_enqueue_script('gallery', get_theme_file_uri('/js/gallery.min.js'), array('anime'), null, true);
+        
+        array_push($deps, 'waypoints', 'waypoints-inview', 'rellax', 'gallery');
+    }
+
+    // --- MAIN SCRIPT ---
+    wp_enqueue_script('main-script', get_theme_file_uri('/js/main.min.js'), $deps, wp_get_theme()->get('Version'), true);
+}
+add_action( 'wp_enqueue_scripts', 'limao_enqueue_assets' );
+
+	//--------------------
+
 function register_my_menus() {
   register_nav_menus(
     array(
