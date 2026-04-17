@@ -15,37 +15,17 @@
     <div class=jl-preloader-inner><img src="<?php bloginfo('template_url'); ?>/images/lemon-loader.svg" class=jl-mar-bottom-15>
         <p class="jl-text-light jl-mar-top-15">Aguarde um pouquinho … Estou preparando a limonada</div>
 </div>
-<div class="jl-toggle-modal jl-overlay"></div>
-<div class="jl-toggle-menu jl-menu-overlay"></div>
-<div class="jl-bg-black jl-modal" id=jl-modal-orcamento>
-    <div class=jl-modal-header>
-        <h1 class="jl-title jl-mar-bottom-15 jl-text-green">Solicite um orçamento</h1><button class="jl-toggle-modal jl-close-modal">X</button></div>
-    <div class=jl-modal-body>
-        <div class=row>
-            <div class=col-sm-12>
-                <p class=jl-text-light>Por favor informe os dados abaixo e eu entrarei em contato com você o mais breve possível.</div>
-        </div>
-        <div class="row jl-mar-top-15">
-            <div class=col-sm-12>
-                <form class=jl-form>
-                    <div class=row>
-                        <div class="col-sm-12 col-md-6"><label class=jl-text-light for=Nome>Nome</label> <input class=jl-field id=jl-nome name=Nome></div>
-                        <div class="col-sm-12 col-md-6"><label class=jl-text-light for=Email>Email</label> <input class=jl-field id=jl-email name=Email type=email></div>
-                        <div class="col-sm-12 col-md-6"><label class=jl-text-light for=Telefone>Telefone</label> <input class=jl-field id=jl-telefone name=Telefone type=tel></div>
-                        <div class="col-sm-12 col-md-6"><label class=jl-text-light for=Site>Site</label> <input class=jl-field id=jl-site name=Site></div>
-                        <div class="col-sm-12 col-md-12 jl-mar-top-15"><label class=jl-text-light for=Mensagem>Descreva abaixo o projeto na qual você precisa de orçamento:</label> <textarea class=jl-textarea id=jl-mensagem name=Mensagem rows=8></textarea></div>
-                    </div>
-                    <div class="row jl-mar-top-15 justify-content-end">
-                        <div class="col-sm-12 col-md-6"><button class="jl-btn jl-btn-green jl-btn-large jl-btn-block">Enviar</button></div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
+
+
+
 <?php if (is_singular('project')) : ?>
     <?php get_template_part('parts/gallery', 'modal'); ?>
 <?php endif; ?>
+<?php if ( is_front_page() || is_page_template( 'pages/home.php' ) ) : ?>
+    <?php get_template_part('parts/orcamento', 'modal'); ?>
+<?php endif; ?>
+
+
 <header class="jl-topbar">
     <div class="jl-logo jl-logo-big">
         <img src="<?php bloginfo('template_url'); ?>/images/logo.svg" alt="Logo João Lemon UX/UI Designer">
